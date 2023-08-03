@@ -17,10 +17,10 @@ public class Main {
         vJobovatel person2 = new vJobovatel("Kolya", true, 22000);
         vJobovatel person3 = new vJobovatel("Petya", true, 18000);
         vJobovatel person4 = new vJobovatel("Marina", true, 13000);
-        vJobovatel person11 = new vJobovatel("Olya", false, 200);
-        vJobovatel person12 = new vJobovatel("Sofia", false, 210);
-        vJobovatel person13 = new vJobovatel("Igor", false, 150);
-        vJobovatel person14 = new vJobovatel("Alexey", false, 360);
+        vJobovatel person5 = new vJobovatel("Olya", false, 200);
+        vJobovatel person6 = new vJobovatel("Sofia", false, 210);
+        vJobovatel person7 = new vJobovatel("Igor", false, 150);
+        vJobovatel person8 = new vJobovatel("Alexey", false, 360);
         System.out.println(vJobovatel.getListWorkers());
         Collections.sort(vJobovatel.getListWorkers());
         System.out.println(vJobovatel.getListWorkers());
@@ -28,8 +28,14 @@ public class Main {
         for (vJobovatel v : vJobovatel.getListWorkers()) {
             System.out.println(v);
         }
+        System.out.println(person1.getPayment());
         System.out.println(person2.getPayment());
-        System.out.println(person13.getPayment());
+        System.out.println(person4.getPayment());
+        System.out.println(person3.getPayment());
+        System.out.println(person5.getPayment());
+        System.out.println(person6.getPayment());
+        System.out.println(person7.getPayment());
+        System.out.println(person8.getPayment());
 
     }
 }

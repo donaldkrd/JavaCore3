@@ -1,16 +1,13 @@
 import java.util.ArrayList;
 
 public class vJobovatel implements Comparable<vJobovatel> {
-    static private ArrayList<vJobovatel> listWorkers = new ArrayList<>(); // статичный лист работкинов. при создании
-                                                                          // работника он добавляется сюда.
+    static private ArrayList<vJobovatel> listWorkers = new ArrayList<>();
 
-    public vJobovatel(String name, boolean choosePayment, double HourOrSalary) // true - FixedSalary , False -
-                                                                               // TimePayment.
+    public vJobovatel(String name, boolean choosePayment, double HourOrSalary)
     {
         this.name = name;
         if (choosePayment)
-            payment = new Fixpayment(HourOrSalary); // при создании обьекта работника выбирем фиксированная зп или нет
-        else
+            payment = new Fixpayment(HourOrSalary);
             payment = new TimePyment(HourOrSalary);
         listWorkers.add(this);
     }
@@ -18,7 +15,7 @@ public class vJobovatel implements Comparable<vJobovatel> {
     private final String name;
     private Payment payment;
 
-    public void setPayment(Payment payment) { // метод замены типа ЗП
+    public void setPayment(Payment payment) {
         this.payment = payment;
     }
 
